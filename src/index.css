@@ -1,0 +1,55 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@media print {
+  header, 
+  .lg\:col-span-5, 
+  .fixed, 
+  button, 
+  .no-print,
+  .border-b,
+  .bg-\[\#fdfcf8\],
+  .border-t {
+    display: none !important;
+  }
+  
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: none !important;
+  }
+
+  .lg\:col-span-12 {
+    display: block !important;
+  }
+
+  .lg\:col-span-7 {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .prose {
+    max-width: none !important;
+    font-size: 12pt !important;
+  }
+
+  .rounded-\[32px\], .rounded-3xl {
+    border-radius: 0 !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+}
+
+.print-only {
+  display: none;
+}
